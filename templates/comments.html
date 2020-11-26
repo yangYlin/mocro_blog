@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+</head>
+<body>
+
+# 如果avatar这个变量不存在，就使用default过滤器提供的值
+
+<img src="{{ avatar|default('https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png') }}" alt="">
+
+<hr>
+
+# length 计算长度
+<p>评论数：({{ comments|length }})</p>
+<ul>
+    {% for comment in comments %}
+        <li>
+            <a href="#">{{ comment.user }}</a>
+            <p>{{ comment.content }}</p>
+        </li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> helll </p>
+<p> 名字：  </p>
+<p> 名字：  </p>
+
+
+<table>
+    <thead>
+        <th>书名</th>
+        <th>作者</th>
+        <th>价格</th>
+    </thead>
+    <tbody>
+    {% for book in Books %}
+    <tr>
+        <td>{{ book.name }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.price }}</td>
+    </tr>
+
+    {% endfor %}
+
+    </tbody>
+</table>
+</body>
+</html>
